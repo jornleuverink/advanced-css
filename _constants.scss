@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin socialmedia {
+    width: 250px;
+    height: 40px;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+@mixin socialmediatext {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 20px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+

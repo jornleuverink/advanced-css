@@ -1,0 +1,249 @@
+@import "./colors";
+@import "./constants";
+
+body {
+    box-sizing: border-box;
+    background-color: $background-body;
+}
+
+.testimonial {
+    margin: 20px 20px 80px 20px;
+    &--header {
+        width: 350px;
+        height: 300px;
+        background-color: $background-testimonial;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        box-shadow: 0px 8px 10px $testimonial-shadow;
+    }
+        &__text {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+            color: $testimonial-text;
+            line-height: 1.8;
+            padding: 30px;
+    }
+    &--footer {
+        width: 350px;
+        height: 140px;
+        background-color: $footer-testimonial;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0px 8px 10px $testimonial-shadow;
+    }
+        &__image {
+            width: 100px;
+            height: 100px;
+            outline: 6px solid $background-testimonial;
+            outline-offset: -1px;
+            border-radius: 50%;
+            position: absolute;
+            left: 150px;
+            top: 265px;
+        }
+        &__name {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 2px;
+            padding-top: 57px;
+            color: $background-testimonial;
+        }
+        &__website {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 13px;
+            display: block;
+            text-align: center;
+            padding-top: 5px;
+            color: $website-testimonial;
+        }
+        &__website:hover {
+            color: $background-testimonial;
+        }    
+}
+
+.portfolio {
+    padding: 20px 20px 80px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 7px;
+    font-size: 0;
+    &__image {
+        border-radius: 4%;
+        width: 100%;
+        height: auto;
+    }
+    &__grid {
+        border-radius: 4%;
+        position: relative;
+        overflow: hidden;
+    }
+        &__grid img {
+            transition: transform .5s ease 0.4s;
+        }
+        &__grid:hover img {
+            transform: scale(1.3);
+        }
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $testimonial-text 0.0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: flex;
+        border-radius: 4%;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    &__overlay--color {
+        background: $footer-testimonial;
+    }
+        &__overlay:hover {
+            opacity: 1;
+        }
+    &__text {
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+        background-color: $background-testimonial;
+        padding: 6px 12px 6px 12px;
+        border-radius: 5px;
+        color: $testimonial-text;
+        cursor: pointer;    
+    }
+        &__text a {
+            text-decoration: none;
+        }
+}
+
+@media only screen and (max-width: 768px) {
+.portfolio {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+}
+}
+
+@media only screen and (max-width: 450px) {
+    .portfolio {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+}
+}
+
+.socialmedia {
+    padding: 20px 0px 80px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    text-decoration: underline;
+    position: fixed;
+    top: 15%;
+    right: 0%;
+    &__blog {
+        background-color: $socialicons-blog;
+        @include socialmedia;
+        border-top-left-radius: 8px;
+        transform: translateX(200px);
+        transition-duration: 1s;
+    }
+        &__blog a {
+            color: $background-testimonial;
+        }
+        &__blog--text::before {
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900; 
+            content: "\f5fc";
+            margin-right: 25px;
+            margin-left: 13px;
+            @include socialmediatext;
+        }
+        &__blog:hover {
+            transform: translateX(0px);
+        }
+    &__twitter {
+        background-color: $socialicons-twitter;
+        @include socialmedia;
+        transform: translateX(200px);
+        transition-duration: 1s;
+    }
+        &__twitter a {
+            color: $background-testimonial;
+        }
+        &__twitter--text::before {
+            font-family: "Font Awesome 5 Brands";
+            font-weight: 400;
+            content: "\f099";
+            margin-right: 27px;
+            margin-left: 15px;
+            @include socialmediatext;
+        }
+        &__twitter:hover {
+            transform: translateX(0px);
+        }
+    &__linkedin {
+        background-color: $socialicons-linkedin;
+        @include socialmedia;
+        transform: translateX(200px);
+        transition-duration: 1s;
+    }
+        &__linkedin a {
+            color: $background-testimonial;
+        }
+        &__linkedin--text::before {
+            font-family: "Font Awesome 5 Brands"; 
+            font-weight: 400; 
+            content: "\f0e1";
+            margin-right: 26px;
+            margin-left: 17px;
+            @include socialmediatext;
+        }
+        &__linkedin:hover {
+            transform: translateX(0px);
+        }
+    &__facebook {
+        background-color: $socialicons-facebook;
+        @include socialmedia;
+        transform: translateX(200px);
+        transition-duration: 1s;
+    }
+        &__facebook a {
+            color: $background-testimonial;
+        }
+        &__facebook--text::before {
+            font-family: "Font Awesome 5 Brands"; 
+            font-weight: 400; 
+            content: "\f39e";
+            margin-right: 28px;
+            margin-left: 20px;
+            @include socialmediatext;
+        }
+        &__facebook:hover {
+            transform: translateX(0px);
+        }
+    &__github {
+        background-color: $socialicons-github;
+        @include socialmedia;
+        border-bottom-left-radius: 8px;
+        transform: translateX(200px);
+        transition-duration: 1s;
+    }
+        &__github a {
+            color: $background-testimonial;
+        }
+        &__github--text::before {
+            font-family: "Font Awesome 5 Brands"; 
+            font-weight: 400; 
+            content: "\f09b";
+            margin-right: 24px;
+            margin-left: 16px;
+            @include socialmediatext;
+        }
+        &__github:hover {
+            transform: translateX(0px);
+        }
+}

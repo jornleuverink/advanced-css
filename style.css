@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #c3cfe2;
+}
+
+.testimonial {
+  margin: 20px 20px 80px 20px;
+}
+.testimonial--header {
+  width: 350px;
+  height: 300px;
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0px 8px 10px #888888;
+}
+.testimonial__text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: black;
+  line-height: 1.8;
+  padding: 30px;
+}
+.testimonial--footer {
+  width: 350px;
+  height: 140px;
+  background-color: #686de0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 8px 10px #888888;
+}
+.testimonial__image {
+  width: 100px;
+  height: 100px;
+  outline: 6px solid white;
+  outline-offset: -1px;
+  border-radius: 50%;
+  position: absolute;
+  left: 150px;
+  top: 265px;
+}
+.testimonial__name {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  padding-top: 57px;
+  color: white;
+}
+.testimonial__website {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  display: block;
+  text-align: center;
+  padding-top: 5px;
+  color: #c2c4ff;
+}
+.testimonial__website:hover {
+  color: white;
+}
+
+.portfolio {
+  padding: 20px 20px 80px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-gap: 7px;
+  font-size: 0;
+}
+.portfolio__image {
+  border-radius: 4%;
+  width: 100%;
+  height: auto;
+}
+.portfolio__grid {
+  border-radius: 4%;
+  position: relative;
+  overflow: hidden;
+}
+.portfolio__grid img {
+  transition: transform 0.5s ease 0.4s;
+}
+.portfolio__grid:hover img {
+  transform: scale(1.3);
+}
+.portfolio__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  border-radius: 4%;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+.portfolio__overlay--color {
+  background: #686de0;
+}
+.portfolio__overlay:hover {
+  opacity: 1;
+}
+.portfolio__text {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: white;
+  padding: 6px 12px 6px 12px;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+}
+.portfolio__text a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .portfolio {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .portfolio {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+  }
+}
+.socialmedia {
+  padding: 20px 0px 80px 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  text-decoration: underline;
+  position: fixed;
+  top: 15%;
+  right: 0%;
+}
+.socialmedia__blog {
+  background-color: #e17b77;
+  width: 250px;
+  height: 40px;
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  border-top-left-radius: 8px;
+  transform: translateX(200px);
+  transition-duration: 1s;
+}
+.socialmedia__blog a {
+  color: white;
+}
+.socialmedia__blog--text::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f5fc";
+  margin-right: 25px;
+  margin-left: 13px;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-size: 20px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.socialmedia__blog:hover {
+  transform: translateX(0px);
+}
+.socialmedia__twitter {
+  background-color: #00aced;
+  width: 250px;
+  height: 40px;
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  transform: translateX(200px);
+  transition-duration: 1s;
+}
+.socialmedia__twitter a {
+  color: white;
+}
+.socialmedia__twitter--text::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+  content: "\f099";
+  margin-right: 27px;
+  margin-left: 15px;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-size: 20px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.socialmedia__twitter:hover {
+  transform: translateX(0px);
+}
+.socialmedia__linkedin {
+  background-color: #007bb6;
+  width: 250px;
+  height: 40px;
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  transform: translateX(200px);
+  transition-duration: 1s;
+}
+.socialmedia__linkedin a {
+  color: white;
+}
+.socialmedia__linkedin--text::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+  content: "\f0e1";
+  margin-right: 26px;
+  margin-left: 17px;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-size: 20px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.socialmedia__linkedin:hover {
+  transform: translateX(0px);
+}
+.socialmedia__facebook {
+  background-color: #3b5998;
+  width: 250px;
+  height: 40px;
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  transform: translateX(200px);
+  transition-duration: 1s;
+}
+.socialmedia__facebook a {
+  color: white;
+}
+.socialmedia__facebook--text::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+  content: "\f39e";
+  margin-right: 28px;
+  margin-left: 20px;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-size: 20px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.socialmedia__facebook:hover {
+  transform: translateX(0px);
+}
+.socialmedia__github {
+  background-color: #333;
+  width: 250px;
+  height: 40px;
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  border-bottom-left-radius: 8px;
+  transform: translateX(200px);
+  transition-duration: 1s;
+}
+.socialmedia__github a {
+  color: white;
+}
+.socialmedia__github--text::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+  content: "\f09b";
+  margin-right: 24px;
+  margin-left: 16px;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  font-size: 20px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.socialmedia__github:hover {
+  transform: translateX(0px);
+}/*# sourceMappingURL=style.css.map */
